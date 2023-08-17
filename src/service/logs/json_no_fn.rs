@@ -369,12 +369,12 @@ pub async fn handle_grpc_request(
     let mut req_stats = write_file(
         data_buf,
         thread_id,
-        &mut stream_file_name,
         StreamParams {
             org_id,
             stream_name,
             stream_type: StreamType::Logs,
         },
+        &mut stream_file_name,
         None,
     );
 
